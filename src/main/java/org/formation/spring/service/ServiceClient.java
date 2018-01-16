@@ -48,12 +48,12 @@ public class ServiceClient implements IServiceClient {
 		
 	}
 	
-	@PostConstruct
-public void createSomeClient() {
-	addClient(new Client(1, "Bob", "L'eponge", "email@gtm.com", new Adresse(24, "rue", "ville"), new Conseiller(1, "nomConseiller", "prenom")));
-	addClient(new Client(2, "nom", "prenom", "email", new Adresse(21, "rue", "ville"), new Conseiller(2, "nomConseiller", "prenom")));
-	
-	
-	}
+//	@PostConstruct
+//public void createSomeClient() {
+//	addClient(new Client(1, "Albert", "camus", "email@gtm.com", new Adresse(13, "rue de la paix", "Lille"), new Conseiller(1, "nomConseiller", "prenom")));
+//	addClient(new Client(2, "nom", "prenom", "email", new Adresse(5, "rue Pasteur", "Nice"), new Conseiller(2, "nomConseiller", "prenom")));
+//	
+//	
+//	}
 	
 }

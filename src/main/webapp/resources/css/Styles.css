@@ -1,0 +1,41 @@
+#nav, #Footer {
+	padding: 10px;
+	margin: 50px;
+	background-color: #000000;
+	color: white;
+}
+
+#img {
+	margin: 0 auto;
+	padding: -5000px ;
+}
+
+
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: MenuTex;
+}
+
+.col {
+	float: left;
+	background-color: #E0FFFF;
+	margin: 10px;
+	width: 280px;
+}
+
+li {
+	display: inline;
+	padding: 2px;
+}
+
+* {
+	font-family: Arial, Verdana;
+	text-align: center;
+}
+
+#
+content {
+	overFlow: auto;
+	heigth: 100;
+}

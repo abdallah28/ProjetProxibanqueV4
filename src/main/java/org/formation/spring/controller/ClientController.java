@@ -30,4 +30,23 @@ public class ClientController {
 	}
 	
 	
+	
+	@RequestMapping(value="/addClient", method=RequestMethod.POST)
+	public  ModelAndView ajouterClient(Client client) {
+		serviceClient.addClient(client);
+				
+		return new ModelAndView("redirect:/displayClients");
+		}
+	
+	
+	@RequestMapping(value="/deleteClient", method=RequestMethod.POST)
+	public ModelAndView supprimerClient(int id) {
+		serviceClient.deleteClient(id);
+		return new ModelAndView("redirect:/displayClients");
+	
+		
+	}
+	
+	
+	
 }

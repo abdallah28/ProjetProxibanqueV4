@@ -4,7 +4,6 @@ import org.formation.spring.config.ApplicationConfig;
 import org.formation.spring.dao.IDaoClient;
 import org.formation.spring.model.Adresse;
 import org.formation.spring.model.Client;
-import org.formation.spring.model.Client2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -18,10 +17,15 @@ public class Test_TP5 {
 		ApplicationContext  context = new AnnotationConfigApplicationContext(ApplicationConfig.class);		   
 
 	//	IPrestiBanqueService service = context.getBean("service", IPrestiBanqueService.class);
-		IDaoClient service=context.getBean("service", IDaoClient.class);
+		//IDaoClient service=context.getBean("service", IDaoClient.class);
 		
-
-		service.findAll();
+			Client c= new Client(1, "nom", "prenom", "email", "login", new Adresse(21, "rue", "ville"));
+			
+			
+			System.out.println(c);
+					
+					
+		//service.findAll();
 	
 		
 //		service.addClient(new Client("Danielo", "BOLIVAR", "login", "motDePasse",new Adresse(53, "rue", "ville") ));
