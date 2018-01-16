@@ -37,4 +37,20 @@ public class LoginController {
 	
 	
 //}
+	
+	private IDaoConseiller daoConseiller;
+	
+	
+	
+	
+	public String seLoggerConseiller() {
+		Conseiller conseiller= IDaoConseiller.findAllConseillerByLogin(login);
+		
+		if (conseiller != null) {
+			
+		}else
+		
+		
+		
+	}
 }
