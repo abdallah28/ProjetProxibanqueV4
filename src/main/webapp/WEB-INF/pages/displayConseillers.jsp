@@ -25,23 +25,19 @@
 <h1>Liste des Conseillers</h1>
 
 
-	<div class="container">
+<div class="container">
 		<table class="table table-striped">
 
-						<c:forEach var="conseillers" items="${conseillers}">   
+			<c:forEach var="conseillers" items="${conseillers}">   
 						
-								<td scope="col">Nom</td>
-								<td><c:out value="${conseiller.nom}" /></td>
+						<td scope="col">Nom</td>
+						<td><c:out value="${conseiller.nom}" /></td>
 						
-
-							
-								<td scope="col">Prenom</td>
-								<td><c:out value="${conseiller.prenom}" /></td>
-		</c:forEach>					
+						<td scope="col">Prenom</td>
+						<td><c:out value="${conseiller.prenom}" /></td>
+			</c:forEach>					
 </table>
-		
-							
 
-	</div>
+</div>
 </body>
 </html>

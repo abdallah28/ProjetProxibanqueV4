@@ -27,69 +27,49 @@
 	<div class="container">
 		<table class="table table-striped">
 
-			<%-- 			<c:forEach var="client" items="${clients}">    --%>
-			<!-- 			<tr scope="row"> -->
-			<!-- 					<td scope="col">Nom</td> -->
-			<%-- 					<td><c:out value="${client.nom}" /></td> --%>
-			<!-- 				</tr> -->
+						<c:forEach var="client" items="${clients}">   
+																
+							<tr scope="row">
+								<td scope="col">Nom</td>
+								<td><c:out value="${client.nom}" /></td>
+							</tr>
 
-			<!-- 				<tr scope="row"> -->
-			<!-- 					<td scope="col">Prenom</td> -->
-			<%-- 					<td><c:out value="${client.prenom}" /></td> --%>
-			<!-- 				</tr> -->
+							<tr scope="row">
+								<td scope="col">Prenom</td>
+								<td><c:out value="${client.prenom}" /></td>
+							</tr>
 
-			<!-- 				<tr scope="row"> -->
-			<!-- 					<td scope="col">Email</td> -->
-			<%-- 					<td><c:out value="${client.email}" /></td> --%>
-			<!-- 				</tr> -->
+							<tr scope="row">
+								<td scope="col">Email</td>
+								<td><c:out value="${client.email}" /></td>
+							</tr>
 
-			<!-- 				<tr scope="row"> -->
-			<!-- 					<td scope="col">Adresse</td> -->
-			<%-- 					<td><c:out value="${client.adresse}" /></td> --%>
-			<!-- 				</tr> -->
+							<tr scope="row">
+								<td scope="col">Adresse</td>
+								<td><c:out value="${client.adresse}" /></td>
+							</tr>
 
-
-			<!-- 				<tr scope="row"> -->
-			<!-- 					<td scope="col">solde</td> -->
-			<%-- 					<td><c:out value="${compte.solde}" /></td> --%>
-			<!-- 				</tr> -->
-
-
-
-
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-
-			<c:forEach var="client" items="${clients}">
-
-				<!-- 					<td scope="col">Nom</td> -->
-
-				<button type="reset" class="btn btn-primary btn-lg">Afficher
-					le client</button>
-
-				<tr scope="row">
-					<td><c:out value="${client.nom}" /></td>
-				</tr>
-
-				<tr scope="row">
-					<!-- 					<td scope="col">Prenom</td> -->
-					<td><c:out value="${client.prenom}" /></td>
-					<br>
-					<br>
-				</tr>
+							<tr scope="row">
+								<td scope="col" type="hidden"></td>
+								<td><c:out tupe="hidden" value="${client.id}" /></td>
+							</tr>
+				<!-- 					
+							<tr scope="row">
+								<td scope="col">solde</td>
+								<td><c:out value="${compte.solde}" /></td>
+							</tr>
+				-->
+							<tr>
+							<a href="diplayClient/${client.id}"> afficher le client </a>
+							</tr>
+						<br>	
 		</table>
 		</c:forEach>
-
 		<br>
-		<br> <br>
-		<br> Pour ajouter un nouveau client cliquez sur le bouton suivant
-		:
+		<br> 
+		<br> Pour ajouter un nouveau client cliquez sur le bouton suivant:
 		<button type="reset" class="btn btn-primary btn-lg">Ajouter
-			un nouveau clientt</button>
+			un nouveau client</button>
 
 
 
