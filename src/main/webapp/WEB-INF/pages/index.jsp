@@ -49,7 +49,7 @@
 	<div id="content">
 
 		<ul>
-			<li class="col"><a href="${pageContext.request.contextPath}/accueil_conseiller"><h3>Conseiller
+			<li class="col"><a href="${pageContext.request.contextPath}/displayConseillers"><h3>Conseiller
 						! Cliquez ici</h3></a></li>
 
 

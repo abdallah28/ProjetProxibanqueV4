@@ -2,16 +2,12 @@ package org.formation.spring.service;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import org.formation.spring.dao.IDaoClient;
-import org.formation.spring.model.Adresse;
 import org.formation.spring.model.Client;
-import org.formation.spring.model.Conseiller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("service")
+@Service
 public class ServiceClient implements IServiceClient {
 
 	@Autowired

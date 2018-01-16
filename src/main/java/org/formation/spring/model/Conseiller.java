@@ -20,7 +20,7 @@ public class Conseiller {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idConseiller;
-	private String nomConseiller;
+	private String nom;
 	private String prenom;
 	private String login;
 	
@@ -40,7 +40,7 @@ public class Conseiller {
 	public Conseiller(int idConseiller, String nomConseiller, String prenom, String login) {
 		super();
 		this.idConseiller = idConseiller;
-		this.nomConseiller = nomConseiller;
+		this.nom = nomConseiller;
 		this.prenom = prenom;
 		this.login = login;
 	}
@@ -50,7 +50,7 @@ public class Conseiller {
 	public Conseiller(int idConseiller, String nomConseiller, String prenom) {
 		super();
 		this.idConseiller = idConseiller;
-		this.nomConseiller = nomConseiller;
+		this.nom = nomConseiller;
 		this.prenom = prenom;
 	}
 
@@ -92,14 +92,14 @@ public class Conseiller {
 	 * @return the nomConseiller
 	 */
 	public String getNomConseiller() {
-		return nomConseiller;
+		return nom;
 	}
 
 	/**
 	 * @param nomConseiller the nomConseiller to set
 	 */
 	public void setNomConseiller(String nomConseiller) {
-		this.nomConseiller = nomConseiller;
+		this.nom = nomConseiller;
 	}
 
 	/**
@@ -135,7 +135,7 @@ public class Conseiller {
 	 */
 	@Override
 	public String toString() {
-		return "Conseiller [idConseiller=" + idConseiller + ", nomConseiller=" + nomConseiller + ", prenom=" + prenom
+		return "Conseiller [idConseiller=" + idConseiller + ", nomConseiller=" + nom + ", prenom=" + prenom
 				+ ", listClient=" + listClient + "]";
 	}
 	

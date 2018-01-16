@@ -9,44 +9,46 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
 @Controller
 public class ClientController {
 
-	// Il faut injecter le service  
-	
-	
 	@Autowired
 	private IServiceClient serviceClient;
-	
-	
 
-	@RequestMapping(value="/displayClients",method=RequestMethod.GET)
+	@RequestMapping(value = "/displayClients", method = RequestMethod.GET)
 	public ModelAndView listClients() {
-		
-		List<Client> clients=serviceClient.listClients();     
-		
-		return new ModelAndView("displayClients","clients",clients);   // "clients"= cl�  , clients= valeur
-		
+
+		List<Client> clients = serviceClient.listClients();
+
+		return new ModelAndView("displayClients", "clients", clients); // "clients"= cl� , clients= valeur
+
 	}
-	
-	
-	
-	@RequestMapping(value="/addClient", method=RequestMethod.POST)
-	public  ModelAndView ajouterClient(Client client) {
+
+	@RequestMapping(value = "/addClient", method = RequestMethod.POST)
+	public ModelAndView ajouterClient(Client client) {
 		serviceClient.addClient(client);
-				
+
 		return new ModelAndView("redirect:/displayClients");
-		}
-	
-	
-	@RequestMapping(value="/deleteClient", method=RequestMethod.POST)
+	}
+
+	@RequestMapping(value = "/deleteClient", method = RequestMethod.POST)
 	public ModelAndView supprimerClient(int id) {
 		serviceClient.deleteClient(id);
 		return new ModelAndView("redirect:/displayClients");
-	
-		
+
 	}
 	
-	
+	public ModelAndView afficherClient(int id) {
+		serviceClient.editClient(id);
+		return new ModelAndView("redirect:/displayClient");
+		
+	}
+
+	public ModelAndView mettreAJour(Client c) {
+		serviceClient.updateClient(c);
+		return new ModelAndView("redirect:/displayClient");
+	}
+
 	
 }
