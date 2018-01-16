@@ -19,12 +19,15 @@
 	<div id="content">
 		<ul>
 		
-				<li class="col"><a href="${pageContext.request.contextPath}/displayClients">     <h3>Conseiller Bienvenue !</h3> </a></li>
-			<li class="col"><a href="${pageContext.request.contextPath}/displayConseillers"> <h3>Gérant bienvenue !</h3> </a></li>
+				<li class="col"><a href="${pageContext.request.contextPath}/displayClients"> <h3>Conseiller Bienvenue !</h3> </a></li>
+			<li class="col"><a href="${pageContext.request.contextPath}/displayConseillers"><h3>Gérant bienvenue !</h3> </a></li>
 		
 		</ul>
 	</div>
-
+<br>
+<br>
+<br>
+<br>
 	<div id="Footer">
 		<p>Bienvenue chez vous</p>
 	</div>

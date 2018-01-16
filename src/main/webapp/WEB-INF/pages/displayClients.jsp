@@ -30,29 +30,26 @@
 						<c:forEach var="client" items="${clients}">   
 																
 							<tr scope="row">
-								<td scope="col">Nom</td>
+								<td scope="col"></td>
 								<td><c:out value="${client.nom}" /></td>
 							</tr>
 
 							<tr scope="row">
-								<td scope="col">Prenom</td>
+								<td scope="col"></td>
 								<td><c:out value="${client.prenom}" /></td>
 							</tr>
 
 							<tr scope="row">
-								<td scope="col">Email</td>
+								<td scope="col"></td>
 								<td><c:out value="${client.email}" /></td>
 							</tr>
 
 							<tr scope="row">
-								<td scope="col">Adresse</td>
+								<td scope="col"></td>
 								<td><c:out value="${client.adresse}" /></td>
 							</tr>
 
-							<tr scope="row">
-								<td scope="col" type="hidden"></td>
-								<td><c:out tupe="hidden" value="${client.id}" /></td>
-							</tr>
+							
 				<!-- 					
 							<tr scope="row">
 								<td scope="col">solde</td>
@@ -68,8 +65,8 @@
 		<br>
 		<br> 
 		<br> Pour ajouter un nouveau client cliquez sur le bouton suivant:
-		<button type="reset" class="btn btn-primary btn-lg">Ajouter
-			un nouveau client</button>
+		<a href="addClient">Ajouter
+			un nouveau client</a>
 
 
 

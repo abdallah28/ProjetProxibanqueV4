@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE>
 <html>
 <head>
@@ -21,9 +19,45 @@
 </head>
 <body>
 
-	
+	<h3>Veuillez remplir le formulaire suivant :</h3>
 
-	
+	<form action="/addClient" method="Post">
+
+
+		<tr scope="row">
+			<td scope="col">Nom :</td>
+			<td><input name="nom" required="required" /></td>
+		</tr>
+		<br>
+		<br>
+		<br>
+
+
+
+		<td scope="col">Prenom :</td>
+		<td><input name="prenom" required="required" /></td>
+		</tr>
+		<br>
+		<br>
+		<br>
+		<td scope="col">Email :</td>
+		<td><input name="email" required="required" /></td>
+		</tr>
+		<br>
+		<br>
+		<br>
+		<td scope="col">Adresse :</td>
+		<td><input name="adresse" required="required" /></td>
+		</tr>
+		<br>
+		<br>
+		<br> <a href="${pageContext.request.contextPath}/displayClients">
+			<button type="submit">Valider</button>
+		</a>
+
+	</form>
+
+
 
 
 
