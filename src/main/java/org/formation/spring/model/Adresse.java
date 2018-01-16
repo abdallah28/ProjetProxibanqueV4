@@ -4,6 +4,12 @@ import javax.persistence.Embeddable;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Stepahne-Abdallah: Cette classe Adresse contient les attributs des
+ *         adresses des clients.Grâce à l'annotation @Embeddable une table n'est
+ *         pas créée et les attributs sont rajoutés à la table des clients
+ *
+ */
 @Component
 @Embeddable
 public class Adresse {
@@ -11,13 +17,11 @@ public class Adresse {
 	private int numero;
 	private String rue;
 	private String ville;
-	
-	
-	//Constructeurs
+
+	// Constructeurs
 	public Adresse() {
 		super();
 	}
-
 
 	public Adresse(int numero, String rue, String ville) {
 		super();
@@ -26,7 +30,7 @@ public class Adresse {
 		this.ville = ville;
 	}
 
-	//Getters Setters
+	// Getters Setters
 
 	/**
 	 * @return the numero
@@ -35,14 +39,13 @@ public class Adresse {
 		return numero;
 	}
 
-
 	/**
-	 * @param numero the numero to set
+	 * @param numero
+	 *            the numero to set
 	 */
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-
 
 	/**
 	 * @return the rue
@@ -51,14 +54,13 @@ public class Adresse {
 		return rue;
 	}
 
-
 	/**
-	 * @param rue the rue to set
+	 * @param rue
+	 *            the rue to set
 	 */
 	public void setRue(String rue) {
 		this.rue = rue;
 	}
-
 
 	/**
 	 * @return the ville
@@ -67,27 +69,24 @@ public class Adresse {
 		return ville;
 	}
 
-
 	/**
-	 * @param ville the ville to set
+	 * @param ville
+	 *            the ville to set
 	 */
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
 
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
-	
-	//toString
+
+	// toString
 	@Override
 	public String toString() {
-		return  numero + "   " + rue + "  " + ville ;
+		return numero + "   " + rue + "  " + ville;
 	}
-	
-	
-	
-	
-	
+
 }

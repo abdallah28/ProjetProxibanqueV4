@@ -16,18 +16,28 @@ import javax.persistence.OneToMany;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+/**
+ * @author Stephane-Abdallah: Classe client est une classe qui regroupe les
+ *         coordonées des clients. Elle contient les annotations necessaires à
+ *         la persistance et au bon fonctionnement de notre application. Elle
+ *         une relation Embedded avec la classe adresse et des relations
+ *         oneToMany avec les comptes et manytoOne avec conseiller
+ * 
+ *
+ */
 @Component
 @Entity
 public class Client {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String nom;
 	private String prenom;
 	private String email;
 	private String login;
-	
+
 	/**
 	 * @return the login
 	 */
@@ -36,7 +46,8 @@ public class Client {
 	}
 
 	/**
-	 * @param login the login to set
+	 * @param login
+	 *            the login to set
 	 */
 	public void setLogin(String login) {
 		this.login = login;
@@ -45,15 +56,15 @@ public class Client {
 	@Autowired
 	@Embedded
 	private Adresse adresse;
-	
+
 	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
 	@JoinColumn(name = "conseiller_id")
 	private Conseiller conseiller;
-	
+
 	@OneToMany(mappedBy = "client", fetch = FetchType.LAZY, cascade = { CascadeType.PERSIST })
 	private Collection<Compte> listeCompte = new ArrayList<>();
 
-	//Constructeurs
+	// Constructeurs
 	public Client() {
 		super();
 	}
@@ -80,8 +91,6 @@ public class Client {
 		this.conseiller = conseiller;
 	}
 
-	
-
 	public Client(int id, String nom, String prenom, String email, String login, Adresse adresse) {
 		super();
 		this.id = id;
@@ -92,7 +101,7 @@ public class Client {
 		this.adresse = adresse;
 	}
 
-	//Getters Setters
+	// Getters Setters
 	/**
 	 * @return the id
 	 */
@@ -101,7 +110,8 @@ public class Client {
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -115,7 +125,8 @@ public class Client {
 	}
 
 	/**
-	 * @param nom the nom to set
+	 * @param nom
+	 *            the nom to set
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
@@ -129,7 +140,8 @@ public class Client {
 	}
 
 	/**
-	 * @param prenom the prenom to set
+	 * @param prenom
+	 *            the prenom to set
 	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
@@ -143,7 +155,8 @@ public class Client {
 	}
 
 	/**
-	 * @param email the email to set
+	 * @param email
+	 *            the email to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
@@ -157,7 +170,8 @@ public class Client {
 	}
 
 	/**
-	 * @param adresse the adresse to set
+	 * @param adresse
+	 *            the adresse to set
 	 */
 	public void setAdresse(Adresse adresse) {
 		this.adresse = adresse;
@@ -171,7 +185,8 @@ public class Client {
 	}
 
 	/**
-	 * @param conseiller the conseiller to set
+	 * @param conseiller
+	 *            the conseiller to set
 	 */
 	public void setConseiller(Conseiller conseiller) {
 		this.conseiller = conseiller;
@@ -185,26 +200,24 @@ public class Client {
 	}
 
 	/**
-	 * @param listeCompte the listeCompte to set
+	 * @param listeCompte
+	 *            the listeCompte to set
 	 */
 	public void setListeCompte(Collection<Compte> listeCompte) {
 		this.listeCompte = listeCompte;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
-	
-	//toString
+
+	// toString
 	@Override
 	public String toString() {
 		return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", adresse=" + adresse
 				+ ", conseiller=" + conseiller + ", listeCompte=" + listeCompte + "]";
 	}
-	
-	
-	
-	
-	
-	
+
 }

@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * @author Stephane_Abdallah: Cette classe remplace la servlet qui permet une
+ *         communication entre les jsp et la couche service qui contient des méthodes du crud de Client
+ *
+ */
 @Controller
 public class ClientController {
 
@@ -38,11 +43,11 @@ public class ClientController {
 		return new ModelAndView("redirect:/displayClients");
 
 	}
-	
+
 	public ModelAndView afficherClient(int id) {
 		serviceClient.editClient(id);
 		return new ModelAndView("redirect:/displayClient");
-		
+
 	}
 
 	public ModelAndView mettreAJour(Client c) {
@@ -50,5 +55,4 @@ public class ClientController {
 		return new ModelAndView("redirect:/displayClient");
 	}
 
-	
 }

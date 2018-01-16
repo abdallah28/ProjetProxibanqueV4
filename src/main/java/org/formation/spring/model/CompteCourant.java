@@ -4,6 +4,13 @@ import javax.persistence.Entity;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Stephane-abdallah :La classe CompteCourant est une classe qui h�rite les
+ *         attributs et m�thodes de la classe Compte. nous souhaitons la
+ *         persister. En plus des attributs et m�thodes h�rit�s, elle a une
+ *         particularit� de plafondDecouvert.
+ *
+ */
 @Entity
 @Component
 public class CompteCourant extends Compte{

@@ -9,25 +9,29 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
+/**
+ * @author Stephane_Abdallah: Configuration de servletContext et du Dispatcher, Instanciation au
+ *         démarrage du serveur
+ *
+ */
 public class WebAppInitializer implements WebApplicationInitializer {
 
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
-		
+
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
 		rootContext.register(WebConfig.class);
-		
+
 		container.addListener(new ContextLoaderListener(rootContext));
 
-
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(rootContext);
-		
+
 		ServletRegistration.Dynamic registration = container.addServlet("dispatcherServlet", dispatcherServlet);
-		
+
 		registration.setLoadOnStartup(1);
-		
+
 		registration.addMapping("/");
-		
+
 	}
 
 }

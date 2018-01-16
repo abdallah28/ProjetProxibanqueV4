@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"org.formation.spring.service","l":"ServiceConseiller"}]

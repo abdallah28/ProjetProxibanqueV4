@@ -7,6 +7,10 @@ import org.formation.spring.model.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Stepahne-abdallah: Classe de service qui nous pemret de réaliser des méthodes specifiques aux clients
+ *
+ */
 @Service
 public class ServiceClient implements IServiceClient {
 

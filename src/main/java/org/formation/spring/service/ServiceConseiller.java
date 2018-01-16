@@ -6,6 +6,10 @@ import org.formation.spring.dao.IDaoConseiller;
 import org.formation.spring.model.Conseiller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+/**
+ * @author Stepahne-abdallah: Classe de service qui nous pemret de réaliser des méthodes specifiques aux conseillers
+ *
+ */
 @Service
 public class ServiceConseiller implements ISeviceConseiller {
 

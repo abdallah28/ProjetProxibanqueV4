@@ -13,6 +13,13 @@ import javax.persistence.OneToMany;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Stephane-Abdallah:La classe conseiller est une classe qui regroupe tout les
+ *         attributs et m�thodes de nos conseillers. Elle contient diff�rentes
+ *         m�thodes et a une relation OneToMany car un conseiller peut avoir
+ *         plusieurs clients
+ *
+ */
 @Entity
 @Component
 public class Conseiller {

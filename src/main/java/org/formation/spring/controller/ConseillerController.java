@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * @author Stephane_Abdallah: Cette classe remplace la servlet qui permet une
+ *         communication entre les jsp et la couche service qui contient des méthodes du crud du Conseiller
+ *:
+ *
+ */
 @Controller
 public class ConseillerController {
 
